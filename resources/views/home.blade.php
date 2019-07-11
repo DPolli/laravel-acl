@@ -2,17 +2,16 @@
 
 @section('content')
 <div class="container">
-    @if (isset($posts))
-        @foreach($posts as $post)
-            <div>
-                <h1>{{$post->title}}</h1>
-                <p>{{$post->description}}</p>
-                <b>Author: {{$post->user->name}}</b>
-                <br>
-            </div>
-        @endforeach
-    @else
+    @forelse($posts as $post)
+        <div>
+            <h1>{{$post->title}}</h1>
+            <p>{{$post->description}}</p>
+            <b>Author: {{$post->user->name}}</b>
+            <br>
+            <hr>
+        </div>
+    @empty
         <p>Nenhum post encontrado!</p>
-    @endif
+    @endforelse
 </div>
 @endsection
