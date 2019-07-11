@@ -8,6 +8,7 @@
             <p>{{$post->description}}</p>
             <b>Author: {{$post->user->name}}</b>
             <br>
+            <a href='{{url("/post/$post->id/update")}}'>Editar</a>
             <hr>
         </div>
     @empty
