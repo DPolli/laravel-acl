@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    @if($post != null)
-        <div>
+    @if(!empty($post))
+        <div style="text-align: justify;">
             <h1>{{$post->title}}</h1>
             <p>{{$post->description}}</p>
             <b>Author: {{$post->user->name}}</b>
