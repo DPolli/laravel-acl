@@ -3,7 +3,7 @@
 @section('content-form')
 
 <form class="login form" role="form" method="POST" action="{{ url('/login') }}">
-    @csrf
+    {{ csrf_field() }}
 
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">

@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
     @forelse($posts as $post)
         @can('view_post', $post)
@@ -18,4 +15,3 @@
         <p>Nenhum post encontrado!</p>
     @endforelse
 </div>
-@endsection
